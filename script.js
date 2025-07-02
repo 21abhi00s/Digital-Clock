@@ -9,7 +9,6 @@ DigitalDate = document.getElementById("DigitalDate"),
  setAlarm = document.getElementById("setAlarm")
  alarmRow = document.getElementById("alarmRow");
 
- let alarmTime;
 window.addEventListener("load", () => {
     for (let h = 1; h <= 12; h++) {
         let option = document.createElement("option");
@@ -61,11 +60,6 @@ function getTimeDifference() {
 
     today = month + "/" + date + "/" + year;
     console.log(today);
-
-    let alarmStart = new Date(today + " " + DigitalClock.innerHTML);
-    let = alarmEnd = new Date(today + " " + alarmTime);
-    let diff = alarmEnd - alarmStart;
-
     let ms = diff;
     let hh = Math.floor(msec / 1000 / 60 / 60);
     msec -= hh * 1000 * 60 * 60;
@@ -76,7 +70,6 @@ function getTimeDifference() {
     if (hh < 0) {
         hh = 24 + hh;
     } 
-    alarmInterval.innerHTML = zeroPad(hh) + ":" + zeroPad;
     console.log(diff, hh, mm, ss);
 }
 
